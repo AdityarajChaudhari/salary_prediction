@@ -12,15 +12,15 @@
 
 <body>
  <div class="login" >
-	<h1>Predict Salary Analysis</h1>
+     <h1 style="text-align : center"><b>Predict Salary Analysis</b> </h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Experience" required="required" size="60" min="0" max="40" />
-        <input type="text" name="test_score" placeholder="Test Score(1-10)" required="required" size="60" min="0" max="10"/>
-		<input type="text" name="interview_score" placeholder="Interview Score(1-10)" required="required" size="60" min="0" max="10"/><br>
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    <form action="{{ url_for('predict')}}" method="post">
+    	<input type="number" name="experience" placeholder="Experience" required="required" size="60" min="0" max="40" style="width: 495px;font-size:15px;"/>
+        <input type="number" name="test_score" placeholder="Test Score(1-10)" required="required" size="60" min="0" max="10" style="width: 495px;font-size:15px;"/>
+		<input type="number" name="interview_score" placeholder="Interview Score(1-10)" required="required" size="60" min="0" max="10" style="width: 495px;font-size:15px;"/><br>
+        <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="width: 500px;font-size:25px;">Predict</button>
     </form>
 
    <br>
